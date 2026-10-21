@@ -1,0 +1,3 @@
+- **Contrato Sincronizado (OpenAPI):** É estritamente proibido criar interfaces TypeScript de DTOs manualmente. Utilize a biblioteca `openapi-typescript` para gerar a tipagem automaticamente a partir do JSON (Swagger) fornecido pelo repositório do backend.
+- **Validação de Fronteira (Zod):** Todo formulário submetido e todo JSON recebido da API Java devem ser validados em tempo de execução via `zod`. Falhas de formato devem ser tratadas visualmente ou no console antes de corromperem o estado do React.
+- **Mocking Contratual (MSW):** Desenvolva a UI e os fluxos assíncronos usando Mock Service Worker (MSW), garantindo que os dados falsos de teste respeitem 100% as tipagens geradas pelo OpenAPI.
