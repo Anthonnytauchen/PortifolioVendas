@@ -13,9 +13,9 @@ export interface ServiceItem {
 
 export const siteContent = {
   brand: {
-    initials: 'T',
-    name: 'TAF Digital',
-    tagline: 'Engenharia de Software & Sistemas B2B de Alta Conversão',
+    initials: 'TAF',
+    name: 'Anthonny Tauchen',
+    tagline: 'Engenharia de Software',
   },
   header: {
     navItems: [
@@ -87,6 +87,9 @@ export const siteContent = {
     subtitle:
       'Conheça os sistemas que construímos e as métricas reais de eficiência e receita geradas para nossos parceiros.',
     emptyState: 'Nenhum projeto publicado no momento.',
+    errorState: 'Não foi possível carregar os projetos agora. Tente novamente em instantes.',
+    loadingAriaLabel: 'Carregando projetos do portfólio',
+    techStackAriaLabel: 'Tecnologias utilizadas',
     liveProjectLabel: 'Ver projeto em produção',
   },
   leadForm: {

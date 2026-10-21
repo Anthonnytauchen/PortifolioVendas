@@ -4,9 +4,10 @@ import { siteContent } from '@/config/siteContent';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { SectionContainer } from '@/components/layout/SectionContainer';
+import { PortfolioGrid } from '@/features/portfolio/components/PortfolioGrid';
 
 export const HomePage: React.FC = () => {
-  const { hero, services } = siteContent;
+  const { hero, services, portfolio } = siteContent;
 
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
@@ -118,6 +119,25 @@ export const HomePage: React.FC = () => {
                 </article>
               ))}
             </div>
+          </div>
+        </SectionContainer>
+
+        {/* Vitrine de Cases de Sucesso */}
+        <SectionContainer id="cases" variant="default">
+          <div className="flex flex-col gap-12">
+            <div className="flex flex-col gap-3 max-w-2xl">
+              <span className="text-sm font-medium leading-none text-primary">
+                {portfolio.sectionBadge}
+              </span>
+              <h2 className="text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-foreground">
+                {portfolio.title}
+              </h2>
+              <p className="text-base text-muted-foreground leading-7">
+                {portfolio.subtitle}
+              </p>
+            </div>
+
+            <PortfolioGrid />
           </div>
         </SectionContainer>
       </main>
